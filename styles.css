@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 
 :root {
-    --primary-color: #e82574;
-    --primary-color-dark: #bc1c5c;
+    --primary-color: #A67C52;
+    --primary-color-dark: #8C6745;
     --text-dark: #0c0a09;
-    --text-light: #78716c;
+    --text-light: #33363d;
     --white: #ffffff;
     --max-width: 1200px;
 }
@@ -134,7 +134,8 @@ nav {
     align-items: center;
     flex-direction: column;
     gap: 2rem;
-    background-color: rgba(188, 28, 92, 0.9);
+    /* background-color: rgba(188, 28, 92, 0.9); */
+    background-color: #A67C52;
     transform: translateY(-100%);
     transition: 0.5s;
     z-index: -1;
