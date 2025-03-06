@@ -260,41 +260,6 @@ nav {
     isolation: isolate;
 }
 
-.room__card__icons {
-    position: absolute;
-    right: 1rem;
-    bottom: 1rem;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    flex-wrap: wrap;
-    gap: 1rem;
-    z-index: 1;
-}
-
-.room__card__icons span {
-    display: inline-block;
-    padding: 2px 8px;
-    font-size: 1.5rem;
-    background-color: var(--white);
-    border-radius: 100%;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-}
-
-.room__card__icons span:nth-child(1) {
-    color: #f472b6;
-}
-
-.room__card__icons span:nth-child(2) {
-    color: #c084fc;
-}
-
-.room__card__icons span:nth-child(3) {
-    color: #60a5fa;
-}
-
 .room__card__details {
     padding: 1rem;
 }

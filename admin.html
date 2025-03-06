@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - View Bookings</title>
+    <link rel="stylesheet" href="stylesbooking.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Admin - View Bookings</h1>
+        <table id="bookingsTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Contact</th>
+                    <th>Email</th>
+                    <th>Check-in Date</th>
+                    <th>Check-out Date</th>
+                    <th>Guests</th>
+                    <th>Room Type</th>
+                    <th>Room Count</th>
+                    <th>Special Requests</th>
+                    <th>Created At</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Bookings will be populated here -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        // Fetch and display bookings
+        async function fetchBookings() {
+            try {
+                const response = await fetch('http://localhost:3000/bookings');
+                const bookings = await response.json();
+
+                const tableBody = document.querySelector('#bookingsTable tbody');
+                tableBody.innerHTML = bookings.map(booking => `
+                    <tr>
+                        <td>${booking.id}</td>
+                        <td>${booking.name}</td>
+                        <td>${booking.contact}</td>
+                        <td>${booking.email}</td>
+                        <td>${booking.checkInDate}</td>
+                        <td>${booking.checkOutDate}</td>
+                        <td>${booking.guests}</td>
+                        <td>${booking.roomType}</td>
+                        <td>${booking.roomCount}</td>
+                        <td>${booking.specialRequests}</td>
+                        <td>${booking.created_at}</td>
+                    </tr>
+                `).join('');
+            } catch (error) {
+                console.error('Error fetching bookings:', error);
+            }
+        }
+
+        // Fetch bookings when the page loads
+        window.addEventListener('load', fetchBookings);
+    </script>
+</body>
+</html>
