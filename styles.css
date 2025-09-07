@@ -134,7 +134,6 @@ nav {
     align-items: center;
     flex-direction: column;
     gap: 2rem;
-    /* background-color: rgba(188, 28, 92, 0.9); */
     background-color: #A67C52;
     transform: translateY(-100%);
     transition: 0.5s;
@@ -166,7 +165,7 @@ nav {
     font-size: 1.2rem;
     color: var(--white);
     text-align: center;
-    opacity: 0.6;
+    opacity: 0.8;
 }
 
 .header__container h1 {
